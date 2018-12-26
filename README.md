@@ -1,2 +1,4 @@
 # numpy
-numpy library for Chez Scheme
+Numpy for Chez Scheme
+
+ and it's faster than Python Native Numpy
