@@ -32,7 +32,8 @@
         pi
         np-array
         np-sin
-        np-tolist)
+        np-tolist
+        )
 
         (import
             (scheme)
@@ -46,8 +47,14 @@
 (define *sin (py-get numpy 'sin))
 (define *tolist (py-get ndarray 'tolist))
 
-(define np-array (py-func1 *array))
+(define-syntax np-array
+    (syntax-rules ()
+        ((_ e)(py-call *array e))
+        ((_ e (k v) ...)((py-call* *array e) (list (cons k v) ...)))))
+
 (define np-sin (py-func1 *sin))
 (define np-tolist (py-func1 *tolist))
+
+
 
 )
