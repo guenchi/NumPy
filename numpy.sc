@@ -50,10 +50,12 @@
 (define-syntax np-array
     (syntax-rules ()
         ((_ e)(py-call *array e))
-        ((_ e (k v) ...)((py-call* *array e) (list (cons k v) ...)))))
+        ((_ e (k v) ...)
+            ((py-call* *array e) 
+                (list (cons (symbol->string k) v) ...)))))
 
-(define np-sin (py-func1 *sin))
-(define np-tolist (py-func1 *tolist))
+(define np-sin (py-func *sin))
+(define np-tolist (py-func *tolist))
 
 
 
