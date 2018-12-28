@@ -33,6 +33,8 @@
         np-array
         np-sin
         np-tolist
+        np-shape
+        np-size
         )
 
         (import
@@ -46,16 +48,21 @@
 (define *array (py-get numpy 'array))
 (define *sin (py-get numpy 'sin))
 (define *tolist (py-get ndarray 'tolist))
+(define *shape (py-get numpy 'shape))
+(define *size (py-get numpy 'size))
+
 
 (define-syntax np-array
     (syntax-rules ()
         ((_ e)(py-call *array e))
         ((_ e (k v) ...)
             ((py-call* *array e) 
-                (list (cons (symbol->string k) v) ...)))))
+                (list (cons k v) ...)))))
 
 (define np-sin (py-func *sin))
 (define np-tolist (py-func *tolist))
+(define np-shape (py-func *shape))
+(define np-size (py-func *size))
 
 
 
