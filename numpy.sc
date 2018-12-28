@@ -39,7 +39,7 @@
 
         (import
             (scheme)
-            (enchantment py call))
+            (darkart py call))
 
 (define numpy (py-import 'numpy))
 (define ndarray (py-get numpy 'ndarray))
