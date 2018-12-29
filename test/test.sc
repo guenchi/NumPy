@@ -10,13 +10,13 @@
 
 (define get-sin
     (lambda (lst)
-        (py-list->vector 'float
+        (plist->vector 'float
             (np-tolist
                 (np-sin
                     (py-div
                         (py-mul pi 
                             (np-array
-                                (list->py-list 'int lst)))
+                                (list->plist 'int lst)))
                         (int 180)))))))
 
 (display (get-sin '(1 2 3 4 5 6 7 8)))
