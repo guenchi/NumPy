@@ -38,7 +38,7 @@
         )
 
         (import
-            (scheme)
+            (chezscheme)
             (darkart py call))
 
 (define numpy (py-import 'numpy))
