@@ -29,6 +29,9 @@
     (export
         numpy
         ndarray
+        char
+        fft
+        linalg
         pi
         np-array
         np-asarray
@@ -63,6 +66,7 @@
 
     (define *array (py-get numpy 'array))
     (define *asarray (py-get numpy 'asarray))
+
     (define *empty (py-get numpy 'empty))
     (define *ones (py-get numpy 'ones))
     (define *zeros (py-get numpy 'zeros))
@@ -75,18 +79,22 @@
     (define *reshape (py-get numpy 'reshape))
     (define *flatten (py-get ndarray 'flatten))
     (define *ravel (py-get numpy 'ravel))
-    (define *transpose (py-get numpy 'transpose))
+
     (define *rollaxis (py-get numpy 'rollaxis))
     (define *swapaxes (py-get numpy 'swapaxes))
+    (define *transpose (py-get numpy 'transpose))
+
     (define *broadcast (py-get numpy 'broadcast))
     (define *expand-dims (py-get numpy 'expand_dims))
     (define *squeeze (py-get numpy 'squeeze))
-    (define *concatenate (py-get numpy 'concatenate))
 
+    (define *concatenate (py-get numpy 'concatenate))
     (define *hstack (py-get numpy 'hstack))
     (define *vstack (py-get numpy 'vstack))
+
     (define *hsplit (py-get numpy 'hsplit))
     (define *vsplit (py-get numpy 'vsplit))
+
     (define *resize (py-get numpy 'resize))
     (define *append (py-get numpy 'append))
     (define *insert (py-get numpy 'insert))
@@ -212,8 +220,62 @@
 
     (define *amin (py-get numpy 'amin))
     (define *amax (py-get numpy 'amax))
+    (define *ptp (py-get numpy 'ptp))
+    (define *percentile (py-get numpy 'percentile))
+    (define *median (py-get numpy 'median))
+    (define *mean (py-get numpy 'mean))
+    (define *average (py-get numpy 'average))
+    (define *std (py-get numpy 'std))
+    (define *var (py-get numpy 'var))
+    (define *sort (py-get numpy 'sort))
+    (define *argsort (py-get numpy 'argsort))
+    (define *lexsort (py-get numpy 'lexsort))
+    (define *msort (py-get numpy 'msort))
+    (define *sort-complex (py-get numpy 'sort_complex))
+    (define *partition (py-get numpy 'partition))
+    (define *argpartition (py-get numpy 'argpartition))
+    (define *argmax (py-get numpy 'argmax))
+    (define *argmin (py-get numpy 'argmin))
+    (define *nonzero (py-get numpy 'nonzero))
+    (define *where (py-get numpy 'where))
+    (define *extract (py-get numpy 'extract))
 
+    (define *matlib-empty (py-get matlib 'empty))
+    (define *matlib-zeros (py-get matlib 'zeros))
+    (define *matlib-ones (py-get matlib 'ones))
+    (define *matlib-eye (py-get matlib 'eye))
+    (define *matlib-identity (py-get matlib 'identity))
+    (define *matlib-rand (py-get matlib 'rand))
 
+    (define *dot (py-get numpy 'dot))
+    (define *vdot (py-get numpy 'vdot))
+    (define *inner (py-get numpy 'inner))
+
+    (define *linalg-det (py-get linalg 'det))
+    (define *linalg-solve (py-get linalg 'solve))
+    (define *linalg-inv (py-get linalg 'inv))
+
+    (define *fft-fft (py-get fft 'fft))
+    (define *fft-ifft (py-get fft 'ifft))
+    (define *fft-fft2 (py-get fft 'fft2))
+    (define *fft-ifft2 (py-get fft 'ifft2))
+    (define *fft-fftn (py-get fft 'fftn))
+    (define *fft-ifftn (py-get fft 'ifftn))
+
+    (define *fft-rfft (py-get fft 'rfft))
+    (define *fft-irfft (py-get fft 'irfft))
+    (define *fft-rfft2 (py-get fft 'rfft2))
+    (define *fft-irfft2 (py-get fft 'irfft2))
+    (define *fft-rfftn (py-get fft 'rfftn))
+    (define *fft-irfftn (py-get fft 'irfftn))
+
+    (define *fft-hfft (py-get fft 'hfft))
+    (define *fft-ihfft (py-get fft 'ihfft))
+
+    (define *fft-fftfreq (py-get fft 'fftfreq))
+    (define *fft-rfftfreq (py-get fft 'rfftfreq))
+    (define *fft-fftshift (py-get fft 'fftshift))
+    (define *fft-ifftshift (py-get fft 'ifftshift))
 
     (define-syntax np-array
         (syntax-rules ()
