@@ -75,63 +75,63 @@
         ((_ e)(py-call *array e))
         ((_ e (k v) ...)
             ((py-call* *array e) 
-                (list (cons k (stype->p v)) ...)))))
+                (list (cons k v) ...)))))
 
 (define-syntax np-asarray
     (syntax-rules ()
         ((_ e)(py-call *asarray e))
         ((_ e (k v) ...)
             ((py-call* *asarray e) 
-                (list (cons k (stype->p v)) ...)))))
+                (list (cons k v) ...)))))
 
 (define-syntax np-empty
     (syntax-rules ()
         ((_ e)(py-call *empty e))
         ((_ e (k v) ...)
             ((py-call* *empty e) 
-                (list (cons k (stype->p v)) ...)))))
+                (list (cons k v) ...)))))
 
 (define-syntax np-ones
     (syntax-rules ()
         ((_ e)(py-call *ones e))
         ((_ e (k v) ...)
             ((py-call* *ones e) 
-                (list (cons k (stype->p v)) ...)))))
+                (list (cons k v) ...)))))
 
 (define-syntax np-zeros
     (syntax-rules ()
         ((_ e)(py-call *zeros e))
         ((_ e (k v) ...)
             ((py-call* *zeros e) 
-                (list (cons k (stype->p v)) ...)))))
+                (list (cons k v) ...)))))
 
 (define-syntax np-from-buffer
     (syntax-rules ()
         ((_ e)(py-call *from-buffer e))
         ((_ e (k v) ...)
             ((py-call* *from-buffer e) 
-                (list (cons k (stype->p v)) ...)))))
+                (list (cons k v) ...)))))
 
 (define-syntax np-from-iter
     (syntax-rules ()
         ((_ e)(py-call *from-iter e))
         ((_ e (k v) ...)
             ((py-call* *from-iter e) 
-                (list (cons k (stype->p v)) ...)))))
+                (list (cons k v) ...)))))
 
 (define-syntax np-linspace
     (syntax-rules ()
         ((_ e)(py-call *linspace e))
         ((_ e (k v) ...)
             ((py-call* *linspace e) 
-                (list (cons k (stype->p v)) ...)))))
+                (list (cons k v) ...)))))
 
 (define-syntax np-logspace
     (syntax-rules ()
         ((_ e)(py-call *logspace e))
         ((_ e (k v) ...)
             ((py-call* *logspace e) 
-                (list (cons k (stype->p v)) ...)))))
+                (list (cons k v) ...)))))
 
 
 
