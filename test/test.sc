@@ -15,11 +15,11 @@
                 (np-sin
                     (py-div
                         (py-mul pi 
-                            (np-array
-                                (list->plist int lst)))
+                            (np-array (list->plist lst) ('dtype "float")))
                         (int 180)))))))
 
 (display (get-sin '(1 2 3 4 5 6 7 8)))
+
 (newline)
 (py-fin)
 

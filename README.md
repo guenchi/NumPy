@@ -2,3 +2,23 @@
 Numpy for Chez Scheme
 
  and it's faster than Python Native Numpy
+
+
+```
+(define get-sin
+    (lambda (lst)
+        (plist->list
+            (np-tolist
+                (np-sin
+                    (py-div
+                        (py-mul pi 
+                            (np-array (list->plist lst) ('dtype "float")))
+                        (int 180)))))))
+
+(display (get-sin '(1 2 3 4 5 6 7 8)))
+
+=>
+
+(0.01745240643728351 0.03489949670250097 0.05233595624294383 0.0697564737441253
+ 0.08715574274765817 0.10452846326765346 0.12186934340514748 0.13917310096006544)
+```

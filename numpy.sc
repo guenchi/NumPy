@@ -46,6 +46,7 @@
 (define pi (py-get numpy 'pi))
 
 (define *array (py-get numpy 'array))
+(define *asarray (py-get numpy 'asarray))
 (define *sin (py-get numpy 'sin))
 (define *tolist (py-get ndarray 'tolist))
 (define *shape (py-get numpy 'shape))
@@ -57,7 +58,14 @@
         ((_ e)(py-call *array e))
         ((_ e (k v) ...)
             ((py-call* *array e) 
-                (list (cons k v) ...)))))
+                (list (cons k (stype->p v)) ...)))))
+
+(define-syntax np-asarray
+    (syntax-rules ()
+        ((_ e)(py-call *asarray e))
+        ((_ e (k v) ...)
+            ((py-call* *array e) 
+                (list (cons k (stype->p v)) ...)))))
 
 (define np-sin (py-func *sin))
 (define np-tolist (py-func *tolist))
