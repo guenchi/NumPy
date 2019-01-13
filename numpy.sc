@@ -45,101 +45,112 @@
         np-size
         )
 
-        (import
-            (chezscheme)
-            (darkart py call))
+    (import
+        (chezscheme)
+        (darkart py call))
 
-(define numpy (py-import 'numpy))
-(define ndarray (py-get numpy 'ndarray))
-(define pi (py-get numpy 'pi))
+    (define numpy (py-import 'numpy))
+    (define ndarray (py-get numpy 'ndarray))
+    (define char (py-get numpy 'char))
+    (define fft (py-get numpy 'fft))
+    (define linalg (py-get numpy 'linalg))
+    (define matlib (py-import 'numpy.matlib))
+    (define pi (py-get numpy 'pi))
 
-(define *array (py-get numpy 'array))
-(define *asarray (py-get numpy 'asarray))
-(define *empty (py-get numpy 'empty))
-(define *ones (py-get numpy 'ones))
-(define *zeros (py-get numpy 'zeros))
-(define *from-buffer (py-get numpy 'frombuffer))
-(define *from-iter (py-get numpy 'fromiter))
-(define *arange (py-get numpy 'arange))
-(define *linspace (py-get numpy 'linspace))
-(define *logspace (py-get numpy 'logspace))
-(define *sin (py-get numpy 'sin))
-(define *tolist (py-get ndarray 'tolist))
-(define *shape (py-get numpy 'shape))
-(define *size (py-get numpy 'size))
-
-
-
-(define-syntax np-array
-    (syntax-rules ()
-        ((_ e)(py-call *array e))
-        ((_ e (k v) ...)
-            ((py-call* *array e) 
-                (list (cons k v) ...)))))
-
-(define-syntax np-asarray
-    (syntax-rules ()
-        ((_ e)(py-call *asarray e))
-        ((_ e (k v) ...)
-            ((py-call* *asarray e) 
-                (list (cons k v) ...)))))
-
-(define-syntax np-empty
-    (syntax-rules ()
-        ((_ e)(py-call *empty e))
-        ((_ e (k v) ...)
-            ((py-call* *empty e) 
-                (list (cons k v) ...)))))
-
-(define-syntax np-ones
-    (syntax-rules ()
-        ((_ e)(py-call *ones e))
-        ((_ e (k v) ...)
-            ((py-call* *ones e) 
-                (list (cons k v) ...)))))
-
-(define-syntax np-zeros
-    (syntax-rules ()
-        ((_ e)(py-call *zeros e))
-        ((_ e (k v) ...)
-            ((py-call* *zeros e) 
-                (list (cons k v) ...)))))
-
-(define-syntax np-from-buffer
-    (syntax-rules ()
-        ((_ e)(py-call *from-buffer e))
-        ((_ e (k v) ...)
-            ((py-call* *from-buffer e) 
-                (list (cons k v) ...)))))
-
-(define-syntax np-from-iter
-    (syntax-rules ()
-        ((_ e)(py-call *from-iter e))
-        ((_ e (k v) ...)
-            ((py-call* *from-iter e) 
-                (list (cons k v) ...)))))
-
-(define-syntax np-linspace
-    (syntax-rules ()
-        ((_ e)(py-call *linspace e))
-        ((_ e (k v) ...)
-            ((py-call* *linspace e) 
-                (list (cons k v) ...)))))
-
-(define-syntax np-logspace
-    (syntax-rules ()
-        ((_ e)(py-call *logspace e))
-        ((_ e (k v) ...)
-            ((py-call* *logspace e) 
-                (list (cons k v) ...)))))
+    (define *array (py-get numpy 'array))
+    (define *asarray (py-get numpy 'asarray))
+    (define *empty (py-get numpy 'empty))
+    (define *ones (py-get numpy 'ones))
+    (define *zeros (py-get numpy 'zeros))
+    (define *from-buffer (py-get numpy 'frombuffer))
+    (define *from-iter (py-get numpy 'fromiter))
+    (define *arange (py-get numpy 'arange))
+    (define *linspace (py-get numpy 'linspace))
+    (define *logspace (py-get numpy 'logspace))
+    (define *sin (py-get numpy 'sin))
+    (define *tolist (py-get ndarray 'tolist))
+    (define *shape (py-get numpy 'shape))
+    (define *size (py-get numpy 'size))
 
 
 
+    (define *reshape (py-get numpy 'reshape))
+    (define *flatten (py-get ndarray 'flatten))
+    (define *ravel (py-get numpy 'ravel))
+    (define *transpose (py-get numpy 'transpose))
 
-(define np-sin (py-func *sin))
-(define np-tolist (py-func *tolist))
-(define np-shape (py-func *shape))
-(define np-size (py-func *size))
+
+
+    (define-syntax np-array
+        (syntax-rules ()
+            ((_ e)(py-call *array e))
+            ((_ e (k v) ...)
+                ((py-call* *array e) 
+                    (list (cons k v) ...)))))
+
+    (define-syntax np-asarray
+        (syntax-rules ()
+            ((_ e)(py-call *asarray e))
+            ((_ e (k v) ...)
+                ((py-call* *asarray e) 
+                    (list (cons k v) ...)))))
+
+    (define-syntax np-empty
+        (syntax-rules ()
+            ((_ e)(py-call *empty e))
+            ((_ e (k v) ...)
+                ((py-call* *empty e) 
+                    (list (cons k v) ...)))))
+
+    (define-syntax np-ones
+        (syntax-rules ()
+            ((_ e)(py-call *ones e))
+            ((_ e (k v) ...)
+                ((py-call* *ones e) 
+                    (list (cons k v) ...)))))
+
+    (define-syntax np-zeros
+        (syntax-rules ()
+            ((_ e)(py-call *zeros e))
+            ((_ e (k v) ...)
+                ((py-call* *zeros e) 
+                    (list (cons k v) ...)))))
+
+    (define-syntax np-from-buffer
+        (syntax-rules ()
+            ((_ e)(py-call *from-buffer e))
+            ((_ e (k v) ...)
+                ((py-call* *from-buffer e) 
+                    (list (cons k v) ...)))))
+
+    (define-syntax np-from-iter
+        (syntax-rules ()
+            ((_ e)(py-call *from-iter e))
+            ((_ e (k v) ...)
+                ((py-call* *from-iter e) 
+                    (list (cons k v) ...)))))
+
+    (define-syntax np-linspace
+        (syntax-rules ()
+            ((_ e)(py-call *linspace e))
+            ((_ e (k v) ...)
+                ((py-call* *linspace e) 
+                    (list (cons k v) ...)))))
+
+    (define-syntax np-logspace
+        (syntax-rules ()
+            ((_ e)(py-call *logspace e))
+            ((_ e (k v) ...)
+                ((py-call* *logspace e) 
+                    (list (cons k v) ...)))))
+
+
+
+
+    (define np-sin (py-func *sin))
+    (define np-tolist (py-func *tolist))
+    (define np-shape (py-func *shape))
+    (define np-size (py-func *size))
 
 
 
