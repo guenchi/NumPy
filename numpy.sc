@@ -57,6 +57,10 @@
     (define linalg (py-get numpy 'linalg))
     (define pi (py-get numpy 'pi))
 
+    (define *tolist (py-get ndarray 'tolist))
+    (define *shape (py-get numpy 'shape))
+    (define *size (py-get numpy 'size))
+
     (define *array (py-get numpy 'array))
     (define *asarray (py-get numpy 'asarray))
     (define *empty (py-get numpy 'empty))
@@ -67,12 +71,6 @@
     (define *arange (py-get numpy 'arange))
     (define *linspace (py-get numpy 'linspace))
     (define *logspace (py-get numpy 'logspace))
-    (define *sin (py-get numpy 'sin))
-    (define *tolist (py-get ndarray 'tolist))
-    (define *shape (py-get numpy 'shape))
-    (define *size (py-get numpy 'size))
-
-
 
     (define *reshape (py-get numpy 'reshape))
     (define *flatten (py-get ndarray 'flatten))
@@ -170,6 +168,50 @@
 
     (define *i0 (py-get numpy 'i0))
     (define *sinc (py-get numpy 'sinc))
+
+    (define *signbit (py-get numpy 'signbit))
+    (define *copysign (py-get numpy 'copysign))
+    (define *frexp (py-get numpy 'frexp))
+    (define *ldexp (py-get numpy 'ldexp))
+    (define *nextafter (py-get numpy 'nextafter))
+    (define *spacing (py-get numpy 'spacing))
+
+    (define *add (py-get numpy 'add))
+    (define *subtract (py-get numpy 'subtract))
+    (define *multiply (py-get numpy 'multiply))
+    (define *divide (py-get numpy 'divide))
+    (define *reciprocal (py-get numpy 'reciprocal))
+    (define *power (py-get numpy 'power))
+    (define *negative (py-get numpy 'negative))
+    (define *true-divide (py-get numpy 'true_divide))
+    (define *floor-divide (py-get numpy 'floor_divide))
+    (define *mod (py-get numpy 'mod))
+    (define *fmod (py-get numpy 'fmod))
+    (define *modf (py-get numpy 'modf))
+    (define *remainder (py-get numpy 'remainder))  
+
+    (define *angle (py-get numpy 'angle))
+    (define *real (py-get numpy 'real))
+    (define *imag (py-get numpy 'imag))
+    (define *conj (py-get numpy 'conj))
+
+    (define *convolve (py-get numpy 'convolve))
+    (define *clip (py-get numpy 'clip))
+    (define *sqrt (py-get numpy 'sqrt))
+    (define *square (py-get numpy 'square))
+    (define *absolute (py-get numpy 'absolute))
+    (define *fabs (py-get numpy 'fabs))
+    (define *sign (py-get numpy 'sign))
+    (define *maximum (py-get numpy 'maximum))
+    (define *minimum (py-get numpy 'minimum))
+    (define *fmax (py-get numpy 'fmax))
+    (define *fmin (py-get numpy 'fmin))
+    (define *nan-to-num (py-get numpy 'nan_to_num))
+    (define *real-if-close (py-get numpy 'real_if_close))
+    (define *interp (py-get numpy 'interp))
+
+    (define *amin (py-get numpy 'amin))
+    (define *amax (py-get numpy 'amax))
 
 
 
