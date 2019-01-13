@@ -50,11 +50,11 @@
         (darkart py call))
 
     (define numpy (py-import 'numpy))
+    (define matlib (py-import 'numpy.matlib))
     (define ndarray (py-get numpy 'ndarray))
     (define char (py-get numpy 'char))
     (define fft (py-get numpy 'fft))
     (define linalg (py-get numpy 'linalg))
-    (define matlib (py-import 'numpy.matlib))
     (define pi (py-get numpy 'pi))
 
     (define *array (py-get numpy 'array))
@@ -150,6 +150,50 @@
     (define *char-encode (py-get char 'encode))
 
     (define *char-decode (py-get char 'decode))
+
+    (define *sin (py-get numpy 'sin))
+
+    (define *cos (py-get numpy 'cos))
+
+    (define *tan (py-get numpy 'tan))
+
+    (define *arcsin (py-get numpy 'arcsin))
+
+    (define *arccos (py-get numpy 'arccos))
+
+    (define *arctan (py-get numpy 'arctan))
+
+    (define *hypot (py-get numpy 'hypot))
+
+    (define *arctan2 (py-get numpy 'arctan2))
+
+    (define *degrees (py-get numpy 'degrees))
+
+    (define *radians (py-get numpy 'radians))
+
+    (define *unwrap (py-get numpy 'unwrap))
+
+    (define *deg2rad (py-get numpy 'deg2rad))
+
+    (define *rad2deg (py-get numpy 'rad2deg))
+
+    (define *sinh (py-get numpy 'sinh))
+
+    (define *cosh (py-get numpy 'cosh))
+
+    (define *tanh (py-get numpy 'tanh))
+
+    (define *arcsinh (py-get numpy 'arcsinh))
+
+    (define *arccosh (py-get numpy 'arccosh))
+
+    (define *arctanh (py-get numpy 'arctanh))
+
+    (define *around (py-get numpy 'around))
+
+    (define *round (py-get numpy 'round_))
+
+    (define *rint (py-get numpy 'rint))
 
     
 
