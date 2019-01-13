@@ -1,7 +1,6 @@
-# numpy
-Numpy for Chez Scheme
-
 ![image](https://github.com/guenchi/numpy/blob/master/NumPy.jpeg)
+
+### Numpy for Chez Scheme
 
  and it's faster than Python Native Numpy
 
