@@ -132,30 +132,44 @@
     (define *rad2deg (py-get numpy 'rad2deg))
 
     (define *sinh (py-get numpy 'sinh))
-
     (define *cosh (py-get numpy 'cosh))
-
     (define *tanh (py-get numpy 'tanh))
-
     (define *arcsinh (py-get numpy 'arcsinh))
-
     (define *arccosh (py-get numpy 'arccosh))
-
     (define *arctanh (py-get numpy 'arctanh))
 
     (define *around (py-get numpy 'around))
-
     (define *round (py-get numpy 'round_))
-
     (define *rint (py-get numpy 'rint))
 
     (define *fix (py-get numpy 'fix))
-
     (define *floor (py-get numpy 'floor))
-
     (define *ceil (py-get numpy 'ceil))
-
     (define *trunc (py-get numpy 'trunc))
+
+    (define *prod (py-get numpy 'prod))
+    (define *sum (py-get numpy 'sum))
+    (define *nansum (py-get numpy 'nansum))
+    (define *cumprod (py-get numpy 'cumprod))
+    (define *cumsum (py-get numpy 'cumsum))
+    (define *diff (py-get numpy 'diff))
+    (define *ediff1d (py-get numpy 'ediff1d))
+    (define *gradient (py-get numpy 'gradient))
+    (define *cross (py-get numpy 'cross))
+    (define *trapz (py-get numpy 'trapz))
+
+    (define *exp (py-get numpy 'exp))
+    (define *expm1 (py-get numpy 'expm1))
+    (define *exp2 (py-get numpy 'exp2))
+    (define *log (py-get numpy 'log))
+    (define *log10 (py-get numpy 'log10))
+    (define *log2 (py-get numpy 'log2))
+    (define *log1p (py-get numpy 'log1p))
+    (define *logaddexp (py-get numpy 'logaddexp))
+    (define *logaddexp2 (py-get numpy 'logaddexp2))
+
+    (define *i0 (py-get numpy 'i0))
+    (define *sinc (py-get numpy 'sinc))
 
 
 
