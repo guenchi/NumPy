@@ -75,18 +75,52 @@
 
 
     (define *reshape (py-get numpy 'reshape))
+
     (define *flatten (py-get ndarray 'flatten))
+
     (define *ravel (py-get numpy 'ravel))
+
     (define *transpose (py-get numpy 'transpose))
+
     (define *rollaxis (py-get numpy 'rollaxis))
+
     (define *swapaxes (py-get numpy 'swapaxes))
+
     (define *broadcast (py-get numpy 'broadcast))
+
     (define *expand-dims (py-get numpy 'expand_dims))
+
     (define *squeeze (py-get numpy 'squeeze))
+
     (define *concatenate (py-get numpy 'concatenate))
+
     (define *hstack (py-get numpy 'hstack))
+
     (define *vstack (py-get numpy 'vstack))
 
+    (define *hsplit (py-get numpy 'hsplit))
+
+    (define *vsplit (py-get numpy 'vsplit))
+
+    (define *resize (py-get numpy 'resize))
+
+    (define *append (py-get numpy 'append))
+
+    (define *insert (py-get numpy 'insert))
+
+    (define *delete (py-get numpy 'delete))
+
+    (define *unique (py-get numpy 'unique))
+
+    (define *bitwise-and (py-get numpy 'bitwise_and))
+
+    (define *bitwise-or (py-get numpy 'bitwise_or))
+
+    (define *invert (py-get numpy 'invert))
+
+    (define *left-shift (py-get numpy 'left_shift))
+
+    (define *right-shift (py-get numpy 'right_shift))
 
 
     (define-syntax np-array
