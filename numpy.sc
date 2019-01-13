@@ -78,6 +78,14 @@
     (define *flatten (py-get ndarray 'flatten))
     (define *ravel (py-get numpy 'ravel))
     (define *transpose (py-get numpy 'transpose))
+    (define *rollaxis (py-get numpy 'rollaxis))
+    (define *swapaxes (py-get numpy 'swapaxes))
+    (define *broadcast (py-get numpy 'broadcast))
+    (define *expand-dims (py-get numpy 'expand_dims))
+    (define *squeeze (py-get numpy 'squeeze))
+    (define *concatenate (py-get numpy 'concatenate))
+    (define *hstack (py-get numpy 'hstack))
+    (define *vstack (py-get numpy 'vstack))
 
 
 
