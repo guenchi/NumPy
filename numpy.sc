@@ -75,106 +75,60 @@
 
 
     (define *reshape (py-get numpy 'reshape))
-    
     (define *flatten (py-get ndarray 'flatten))
-
     (define *ravel (py-get numpy 'ravel))
-
     (define *transpose (py-get numpy 'transpose))
-
     (define *rollaxis (py-get numpy 'rollaxis))
-
     (define *swapaxes (py-get numpy 'swapaxes))
-
     (define *broadcast (py-get numpy 'broadcast))
-
     (define *expand-dims (py-get numpy 'expand_dims))
-
     (define *squeeze (py-get numpy 'squeeze))
-
     (define *concatenate (py-get numpy 'concatenate))
 
     (define *hstack (py-get numpy 'hstack))
-
     (define *vstack (py-get numpy 'vstack))
-
     (define *hsplit (py-get numpy 'hsplit))
-
     (define *vsplit (py-get numpy 'vsplit))
-
     (define *resize (py-get numpy 'resize))
-
     (define *append (py-get numpy 'append))
-
     (define *insert (py-get numpy 'insert))
-
     (define *delete (py-get numpy 'delete))
-
     (define *unique (py-get numpy 'unique))
 
     (define *bitwise-and (py-get numpy 'bitwise_and))
-
     (define *bitwise-or (py-get numpy 'bitwise_or))
-
     (define *invert (py-get numpy 'invert))
-
     (define *left-shift (py-get numpy 'left_shift))
-
     (define *right-shift (py-get numpy 'right_shift))
 
-
     (define *char-add (py-get char 'add))
-
     (define *char-multiply (py-get char 'multiply))
-
     (define *char-center (py-get char 'center))
-
     (define *char-capitalize (py-get char 'capitalize))
-
     (define *char-title (py-get char 'title))
-
     (define *char-lower (py-get char 'lower))
-
     (define *char-upper (py-get char 'upper))
-
     (define *char-split (py-get char 'split))
-
     (define *char-splitlines (py-get char 'splitlines))
-
     (define *char-strip (py-get char 'strip))
-
     (define *char-join (py-get char 'join))
-
     (define *char-replace (py-get char 'replace))
-
     (define *char-encode (py-get char 'encode))
-
     (define *char-decode (py-get char 'decode))
 
     (define *sin (py-get numpy 'sin))
-
     (define *cos (py-get numpy 'cos))
-
     (define *tan (py-get numpy 'tan))
-
     (define *arcsin (py-get numpy 'arcsin))
-
     (define *arccos (py-get numpy 'arccos))
-
     (define *arctan (py-get numpy 'arctan))
 
     (define *hypot (py-get numpy 'hypot))
-
     (define *arctan2 (py-get numpy 'arctan2))
-
     (define *degrees (py-get numpy 'degrees))
-
     (define *radians (py-get numpy 'radians))
-
     (define *unwrap (py-get numpy 'unwrap))
-
     (define *deg2rad (py-get numpy 'deg2rad))
-
     (define *rad2deg (py-get numpy 'rad2deg))
 
     (define *sinh (py-get numpy 'sinh))
@@ -195,7 +149,15 @@
 
     (define *rint (py-get numpy 'rint))
 
-    
+    (define *fix (py-get numpy 'fix))
+
+    (define *floor (py-get numpy 'floor))
+
+    (define *ceil (py-get numpy 'ceil))
+
+    (define *trunc (py-get numpy 'trunc))
+
+
 
     (define-syntax np-array
         (syntax-rules ()
