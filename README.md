@@ -2,7 +2,7 @@
 
 ![image](https://github.com/guenchi/numpy/blob/master/NumPy.jpeg)
 
-### and it's faster than Python Native NumPy
+### and it's faster than the Native NumPy of Python
 
 
 ```
