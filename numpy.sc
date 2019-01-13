@@ -75,7 +75,7 @@
 
 
     (define *reshape (py-get numpy 'reshape))
-
+    
     (define *flatten (py-get ndarray 'flatten))
 
     (define *ravel (py-get numpy 'ravel))
@@ -122,6 +122,36 @@
 
     (define *right-shift (py-get numpy 'right_shift))
 
+
+    (define *char-add (py-get char 'add))
+
+    (define *char-multiply (py-get char 'multiply))
+
+    (define *char-center (py-get char 'center))
+
+    (define *char-capitalize (py-get char 'capitalize))
+
+    (define *char-title (py-get char 'title))
+
+    (define *char-lower (py-get char 'lower))
+
+    (define *char-upper (py-get char 'upper))
+
+    (define *char-split (py-get char 'split))
+
+    (define *char-splitlines (py-get char 'splitlines))
+
+    (define *char-strip (py-get char 'strip))
+
+    (define *char-join (py-get char 'join))
+
+    (define *char-replace (py-get char 'replace))
+
+    (define *char-encode (py-get char 'encode))
+
+    (define *char-decode (py-get char 'decode))
+
+    
 
     (define-syntax np-array
         (syntax-rules ()
