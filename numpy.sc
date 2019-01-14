@@ -53,7 +53,7 @@
         (darkart py call))
 
     (define numpy (py-import 'numpy))
-    (define matlib (py-import 'numpy.matlib))
+    
     (define ndarray (py-get numpy 'ndarray))
     (define char (py-get numpy 'char))
     (define fft (py-get numpy 'fft))
@@ -85,13 +85,16 @@
     (define *transpose (py-get numpy 'transpose))
 
     (define *broadcast (py-get numpy 'broadcast))
+    (define *broadcast-to (py-get numpy 'broadcast_to))
     (define *expand-dims (py-get numpy 'expand_dims))
     (define *squeeze (py-get numpy 'squeeze))
 
     (define *concatenate (py-get numpy 'concatenate))
+    (define *stack (py-get numpy 'stack))  
     (define *hstack (py-get numpy 'hstack))
     (define *vstack (py-get numpy 'vstack))
 
+    (define *split (py-get numpy 'split))
     (define *hsplit (py-get numpy 'hsplit))
     (define *vsplit (py-get numpy 'vsplit))
 
@@ -155,9 +158,12 @@
 
     (define *prod (py-get numpy 'prod))
     (define *sum (py-get numpy 'sum))
+    (define *nanprod (py-get numpy 'nanprod)) 
     (define *nansum (py-get numpy 'nansum))
     (define *cumprod (py-get numpy 'cumprod))
     (define *cumsum (py-get numpy 'cumsum))
+    (define *nancumprod (py-get numpy 'nancumprod))
+    (define *nancumsum (py-get numpy 'nancumsum))
     (define *diff (py-get numpy 'diff))
     (define *ediff1d (py-get numpy 'ediff1d))
     (define *gradient (py-get numpy 'gradient))
@@ -184,19 +190,25 @@
     (define *nextafter (py-get numpy 'nextafter))
     (define *spacing (py-get numpy 'spacing))
 
+    (define *lcm (py-get numpy 'lcm))
+    (define *gcd (py-get numpy 'gcd))  
+
     (define *add (py-get numpy 'add))
     (define *subtract (py-get numpy 'subtract))
     (define *multiply (py-get numpy 'multiply))
     (define *divide (py-get numpy 'divide))
     (define *reciprocal (py-get numpy 'reciprocal))
     (define *power (py-get numpy 'power))
+    (define *positive (py-get numpy 'positive))
     (define *negative (py-get numpy 'negative))
     (define *true-divide (py-get numpy 'true_divide))
     (define *floor-divide (py-get numpy 'floor_divide))
+    (define *float-power (py-get numpy 'float_power))
     (define *mod (py-get numpy 'mod))
     (define *fmod (py-get numpy 'fmod))
     (define *modf (py-get numpy 'modf))
-    (define *remainder (py-get numpy 'remainder))  
+    (define *remainder (py-get numpy 'remainder))
+    (define *divmod (py-get numpy 'divmod))
 
     (define *angle (py-get numpy 'angle))
     (define *real (py-get numpy 'real))
@@ -206,10 +218,12 @@
     (define *convolve (py-get numpy 'convolve))
     (define *clip (py-get numpy 'clip))
     (define *sqrt (py-get numpy 'sqrt))
+    (define *cbrt (py-get numpy 'cbrt))
     (define *square (py-get numpy 'square))
     (define *absolute (py-get numpy 'absolute))
     (define *fabs (py-get numpy 'fabs))
     (define *sign (py-get numpy 'sign))
+    (define *heaviside (py-get numpy 'heaviside))
     (define *maximum (py-get numpy 'maximum))
     (define *minimum (py-get numpy 'minimum))
     (define *fmax (py-get numpy 'fmax))
@@ -240,16 +254,10 @@
     (define *where (py-get numpy 'where))
     (define *extract (py-get numpy 'extract))
 
-    (define *matlib-empty (py-get matlib 'empty))
-    (define *matlib-zeros (py-get matlib 'zeros))
-    (define *matlib-ones (py-get matlib 'ones))
-    (define *matlib-eye (py-get matlib 'eye))
-    (define *matlib-identity (py-get matlib 'identity))
-    (define *matlib-rand (py-get matlib 'rand))
-
     (define *dot (py-get numpy 'dot))
     (define *vdot (py-get numpy 'vdot))
     (define *inner (py-get numpy 'inner))
+    (define *matmul (py-get numpy 'matmul))
 
     (define *linalg-det (py-get linalg 'det))
     (define *linalg-solve (py-get linalg 'solve))
@@ -351,3 +359,5 @@
 
 
 )
+
+
