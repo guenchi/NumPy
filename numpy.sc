@@ -30,8 +30,6 @@
         numpy
         ndarray
         char
-        fft
-        linalg
         pi
         np-array
         np-asarray
@@ -57,7 +55,6 @@
     (define ndarray (py-get numpy 'ndarray))
     (define char (py-get numpy 'char))
     (define fft (py-get numpy 'fft))
-    (define linalg (py-get numpy 'linalg))
     (define pi (py-get numpy 'pi))
 
     (define *tolist (py-get ndarray 'tolist))
@@ -259,9 +256,6 @@
     (define *inner (py-get numpy 'inner))
     (define *matmul (py-get numpy 'matmul))
 
-    (define *linalg-det (py-get linalg 'det))
-    (define *linalg-solve (py-get linalg 'solve))
-    (define *linalg-inv (py-get linalg 'inv))
 
     (define *fft-fft (py-get fft 'fft))
     (define *fft-ifft (py-get fft 'ifft))
