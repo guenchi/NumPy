@@ -27,7 +27,7 @@
 
 (library (numpy fft)
     (export
-        fftlib
+        ft
         )
 
     (import
@@ -35,29 +35,29 @@
         (darkart py call)
         (only (numpy numpy) numpy))
 
-    (define fftlib (py-get numpy 'fft))
+    (define ft (py-get numpy 'fft))
     
-    (define *fft (py-get fftlib 'fft))
-    (define *ifft (py-get fftlib 'ifft))
-    (define *fft2 (py-get fftlib 'fft2))
-    (define *ifft2 (py-get fftlib 'ifft2))
-    (define *fftn (py-get fftlib 'fftn))
-    (define *ifftn (py-get fftlib 'ifftn))
+    (define *fft (py-get ft 'fft))
+    (define *ifft (py-get ft 'ifft))
+    (define *fft2 (py-get ft 'fft2))
+    (define *ifft2 (py-get ft 'ifft2))
+    (define *fftn (py-get ft 'fftn))
+    (define *ifftn (py-get ft 'ifftn))
 
-    (define *rfft (py-get fftlib 'rfft))
-    (define *irfft (py-get fftlib 'irfft))
-    (define *rfft2 (py-get fftlib 'rfft2))
-    (define *irfft2 (py-get fftlib 'irfft2))
-    (define *rfftn (py-get fftlib 'rfftn))
-    (define *irfftn (py-get fftlib 'irfftn))
+    (define *rfft (py-get ft 'rfft))
+    (define *irfft (py-get ft 'irfft))
+    (define *rfft2 (py-get ft 'rfft2))
+    (define *irfft2 (py-get ft 'irfft2))
+    (define *rfftn (py-get ft 'rfftn))
+    (define *irfftn (py-get ft 'irfftn))
 
-    (define *hfft (py-get fftlib 'hfft))
-    (define *ihfft (py-get fftlib 'ihfft))
+    (define *hfft (py-get ft 'hfft))
+    (define *ihfft (py-get ft 'ihfft))
 
-    (define *fftfreq (py-get fftlib 'fftfreq))
-    (define *rfftfreq (py-get fftlib 'rfftfreq))
-    (define *fftshift (py-get fftlib 'fftshift))
-    (define *ifftshift (py-get fftlib 'ifftshift))
+    (define *fftfreq (py-get ft 'fftfreq))
+    (define *rfftfreq (py-get ft 'rfftfreq))
+    (define *fftshift (py-get ft 'fftshift))
+    (define *ifftshift (py-get ft 'ifftshift))
 
 
 
