@@ -53,7 +53,6 @@
         (darkart py call))
 
     (define numpy (py-import 'numpy))
-    (define matlib (py-import 'numpy.matlib))
     (define ndarray (py-get numpy 'ndarray))
     (define char (py-get numpy 'char))
     (define fft (py-get numpy 'fft))
@@ -253,13 +252,6 @@
     (define *nonzero (py-get numpy 'nonzero))
     (define *where (py-get numpy 'where))
     (define *extract (py-get numpy 'extract))
-
-    (define *matlib-empty (py-get matlib 'empty))
-    (define *matlib-zeros (py-get matlib 'zeros))
-    (define *matlib-ones (py-get matlib 'ones))
-    (define *matlib-eye (py-get matlib 'eye))
-    (define *matlib-identity (py-get matlib 'identity))
-    (define *matlib-rand (py-get matlib 'rand))
 
     (define *dot (py-get numpy 'dot))
     (define *vdot (py-get numpy 'vdot))
