@@ -30,6 +30,8 @@
         numpy
         ndarray
         char
+        fft
+        linalg
         pi
         np-array
         np-asarray
@@ -51,9 +53,11 @@
         (darkart py call))
 
     (define numpy (py-import 'numpy))
-    
+    (define matlib (py-import 'numpy.matlib))
     (define ndarray (py-get numpy 'ndarray))
     (define char (py-get numpy 'char))
+    (define fft (py-get numpy 'fft))
+    (define linalg (py-get numpy 'linalg))
     (define pi (py-get numpy 'pi))
 
     (define *tolist (py-get ndarray 'tolist))
@@ -250,11 +254,43 @@
     (define *where (py-get numpy 'where))
     (define *extract (py-get numpy 'extract))
 
+    (define *matlib-empty (py-get matlib 'empty))
+    (define *matlib-zeros (py-get matlib 'zeros))
+    (define *matlib-ones (py-get matlib 'ones))
+    (define *matlib-eye (py-get matlib 'eye))
+    (define *matlib-identity (py-get matlib 'identity))
+    (define *matlib-rand (py-get matlib 'rand))
+
     (define *dot (py-get numpy 'dot))
     (define *vdot (py-get numpy 'vdot))
     (define *inner (py-get numpy 'inner))
     (define *matmul (py-get numpy 'matmul))
 
+    (define *linalg-det (py-get linalg 'det))
+    (define *linalg-solve (py-get linalg 'solve))
+    (define *linalg-inv (py-get linalg 'inv))
+
+    (define *fft-fft (py-get fft 'fft))
+    (define *fft-ifft (py-get fft 'ifft))
+    (define *fft-fft2 (py-get fft 'fft2))
+    (define *fft-ifft2 (py-get fft 'ifft2))
+    (define *fft-fftn (py-get fft 'fftn))
+    (define *fft-ifftn (py-get fft 'ifftn))
+
+    (define *fft-rfft (py-get fft 'rfft))
+    (define *fft-irfft (py-get fft 'irfft))
+    (define *fft-rfft2 (py-get fft 'rfft2))
+    (define *fft-irfft2 (py-get fft 'irfft2))
+    (define *fft-rfftn (py-get fft 'rfftn))
+    (define *fft-irfftn (py-get fft 'irfftn))
+
+    (define *fft-hfft (py-get fft 'hfft))
+    (define *fft-ihfft (py-get fft 'ihfft))
+
+    (define *fft-fftfreq (py-get fft 'fftfreq))
+    (define *fft-rfftfreq (py-get fft 'rfftfreq))
+    (define *fft-fftshift (py-get fft 'fftshift))
+    (define *fft-ifftshift (py-get fft 'ifftshift))
 
     (define-syntax np-array
         (syntax-rules ()
