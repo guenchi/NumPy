@@ -25,9 +25,9 @@
 
 
 
-(library (numpy linalg)
+(library (numpy fft)
     (export
-        linalg
+        fftlib
         )
 
     (import
@@ -35,10 +35,30 @@
         (darkart py call)
         (only (numpy numpy) numpy))
 
-    (define linalg (py-get numpy 'linalg))
+    (define fftlib (py-get numpy 'fft))
     
-    (define *det (py-get linalg 'det))
-    (define *solve (py-get linalg 'solve))
-    (define *inv (py-get linalg 'inv))
+    (define *fft (py-get fftlib 'fft))
+    (define *ifft (py-get fftlib 'ifft))
+    (define *fft2 (py-get fftlib 'fft2))
+    (define *ifft2 (py-get fftlib 'ifft2))
+    (define *fftn (py-get fftlib 'fftn))
+    (define *ifftn (py-get fftlib 'ifftn))
+
+    (define *rfft (py-get fftlib 'rfft))
+    (define *irfft (py-get fftlib 'irfft))
+    (define *rfft2 (py-get fftlib 'rfft2))
+    (define *irfft2 (py-get fftlib 'irfft2))
+    (define *rfftn (py-get fftlib 'rfftn))
+    (define *irfftn (py-get fftlib 'irfftn))
+
+    (define *hfft (py-get fftlib 'hfft))
+    (define *ihfft (py-get fftlib 'ihfft))
+
+    (define *fftfreq (py-get fftlib 'fftfreq))
+    (define *rfftfreq (py-get fftlib 'rfftfreq))
+    (define *fftshift (py-get fftlib 'fftshift))
+    (define *ifftshift (py-get fftlib 'ifftshift))
+
+
 
 )
