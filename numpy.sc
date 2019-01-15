@@ -46,6 +46,7 @@
         np-tolist
         np-shape
         np-size
+        np-arange
         )
 
     (import
@@ -354,6 +355,7 @@
     (define np-tolist (py-func *tolist))
     (define np-shape (py-func *shape))
     (define np-size (py-func *size))
+    (define np-arange (py-func *arange))
 
 
 
