@@ -1,6 +1,6 @@
 # NumPy for Chez Scheme
 
-![image](https://github.com/guenchi/numpy/blob/master/NumPy.jpeg)
+![image](https://github.com/guenchi/numpy/blob/master/img/NumPy.jpeg)
 
 ### and it's faster than the Native NumPy of Python
 
