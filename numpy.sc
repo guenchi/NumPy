@@ -47,6 +47,8 @@
         np-shape
         np-size
         np-arange
+        np-exp
+        np-negative
         )
 
     (import
@@ -336,9 +338,9 @@
 
     (define-syntax np-linspace
         (syntax-rules ()
-            ((_ e)(py-call *linspace e))
-            ((_ e (k v) ...)
-                ((py-call* *linspace e) 
+            ((_ e1 e2 e3)(py-call *linspace e1 e2 e3))
+            ((_ e1 e2 e3 (k v) ...)
+                ((py-call* *linspace e1 e2 e3) 
                     (list (cons k v) ...)))))
 
     (define-syntax np-logspace
@@ -356,6 +358,8 @@
     (define np-shape (py-func *shape))
     (define np-size (py-func *size))
     (define np-arange (py-func *arange))
+    (define np-exp (py-func *exp))
+    (define np-negative (py-func *negative))
 
 
 
