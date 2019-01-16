@@ -4,10 +4,7 @@
 
 ![image](https://github.com/guenchi/numpy/blob/master/img/NumPy.jpeg)
 
-
-
 ### and it's faster than the Native NumPy of Python
-
 
 ```
 (define get-sin
