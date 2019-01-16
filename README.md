@@ -33,7 +33,7 @@ https://github.com/python/cpython
 
 https://github.com/numpy/numpy
 
-### The Darkart eco-system:
+### The Darkart ecosystem:
 
 https://github.com/guenchi/NumPy
 
