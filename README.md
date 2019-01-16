@@ -2,7 +2,7 @@
 
 ![image](https://github.com/guenchi/numpy/blob/master/img/NumPy.jpeg)
 
-**[Darkart](https://github.com/guenchi/Darkart) eco-system**: [NumPy](https://github.com/guenchi/NumPy) ✅ [SciPy](https://github.com/guenchi/SciPy) :construction: [SymPy](https://github.com/guenchi/SymPy) :construction: [Matplotlib](https://github.com/guenchi/Matplotlib) ✅ [Pandas](https://github.com/guenchi/Pandas) :construction:
+[Darkart](https://github.com/guenchi/Darkart) eco-system: [NumPy](https://github.com/guenchi/NumPy) ✅ [SciPy](https://github.com/guenchi/SciPy) :construction: [SymPy](https://github.com/guenchi/SymPy) :construction: [Matplotlib](https://github.com/guenchi/Matplotlib) ✅ [Pandas](https://github.com/guenchi/Pandas) :construction:
 
 ### and it's faster than the Native NumPy of Python
 
