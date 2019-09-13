@@ -29,11 +29,11 @@
 
 ## Depencies:
 
-https://github.com/guenchi/Darkart
+- [Darkart](https://github.com/guenchi/Darkart)
 
-https://github.com/python/cpython
+- [CPython](https://github.com/python/cpython)
 
-https://github.com/numpy/numpy
+- [NumPy](https://github.com/numpy/numpy)
 
 ## Darkart's ecosystem
 
