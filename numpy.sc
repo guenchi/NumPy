@@ -62,6 +62,10 @@
     (define linalg (py-get numpy 'linalg))
     (define pi (py-get numpy 'pi))
 
+    (define *tolist (py-get ndarray 'tolist))
+    (define *shape (py-get numpy 'shape))
+    (define *size (py-get numpy 'size))
+
     (define *array (py-get numpy 'array))
     (define *asarray (py-get numpy 'asarray))
 
@@ -70,6 +74,7 @@
     (define *zeros (py-get numpy 'zeros))
     (define *from-buffer (py-get numpy 'frombuffer))
     (define *from-iter (py-get numpy 'fromiter))
+    (define *arange (py-get numpy 'arange))
     (define *linspace (py-get numpy 'linspace))
     (define *logspace (py-get numpy 'logspace))
 
@@ -122,6 +127,7 @@
     (define *char-encode (py-get char 'encode))
     (define *char-decode (py-get char 'decode))
 
+    (define *sin (py-get numpy 'sin))
     (define *cos (py-get numpy 'cos))
     (define *tan (py-get numpy 'tan))
     (define *arcsin (py-get numpy 'arcsin))
@@ -166,6 +172,7 @@
     (define *cross (py-get numpy 'cross))
     (define *trapz (py-get numpy 'trapz))
 
+    (define *exp (py-get numpy 'exp))
     (define *expm1 (py-get numpy 'expm1))
     (define *exp2 (py-get numpy 'exp2))
     (define *log (py-get numpy 'log))
@@ -195,6 +202,7 @@
     (define *reciprocal (py-get numpy 'reciprocal))
     (define *power (py-get numpy 'power))
     (define *positive (py-get numpy 'positive))
+    (define *negative (py-get numpy 'negative))
     (define *true-divide (py-get numpy 'true_divide))
     (define *floor-divide (py-get numpy 'floor_divide))
     (define *float-power (py-get numpy 'float_power))
@@ -345,13 +353,13 @@
 
 
 
-    (define np-sin (py-func numpy 'sin))
-    (define np-tolist (py-func ndarray 'tolist))
-    (define np-shape (py-func numpy 'shape))
-    (define np-size (py-func numpy 'size))
-    (define np-arange (py-func numpy 'arange))
-    (define np-exp (py-func numpy 'exp))
-    (define np-negative (py-func numpy 'negative))
+    (define np-sin (py-func *sin))
+    (define np-tolist (py-func *tolist))
+    (define np-shape (py-func *shape))
+    (define np-size (py-func *size))
+    (define np-arange (py-func *arange))
+    (define np-exp (py-func *exp))
+    (define np-negative (py-func *negative))
 
 
 
